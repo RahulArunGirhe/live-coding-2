@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> live coding 2</title>
+</head>
+<div >Input <input type="text" id="string">
+  <p></p>
+</div>
+
+<button onclick="increase()"> + </button>
+<script>
+  function increase(){
+    let str = document.getElementById("string");
+    let num=window.getComputedStyle(str,null).getPropertyValue('font-size');
+    var size = parseInt(num);
+    str.style.fontSize=(size+2)+'px';
+  }
+</script>
+<button onclick="decrease()"> - </button>
+<script>
+  function decrease(){
+    let str = document.getElementById("string");
+    let num=window.getComputedStyle(str,null).getPropertyValue('font-size');
+    var size = parseInt(num);
+    str.style.fontSize=(size-2)+'px';
+    
+  }
+</script>
+
+  
+</body>
+</html>
